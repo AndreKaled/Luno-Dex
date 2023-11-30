@@ -60,3 +60,31 @@ function adicionarPokemon(){
         }).then(firebase.storage().ref('imagens-pokemons/' +val.id).put(file).then(alert('Upload feito!')))
     )
 }
+
+const list = document.getElementById('list')
+
+list.addEventListener('change', busca)
+
+function busca(e){
+    var type = list.value.split(',')
+    console.log(type)
+}
+
+const lista_tipos = document.getElementById('lista-tipos');
+
+async function addTipos(){
+
+    var li = document.createElement('li')
+    var box = document.createElement('input')
+    var label = document.createElement('label')
+    label.innerHTML = await firebase.firestore().collection('pokemons-tipos').get().then(snapshot => {
+        const tipos = snapshot.docs.map(doc => doc.data())
+        criaPokemonAluno(tipos)
+    })
+    /** continuar aq */ 
+    box.type = "checkbox"
+
+
+    li.appendChild(box)
+    list.appendChild(li)
+}
