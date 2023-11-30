@@ -103,3 +103,8 @@ img{
     }
 
 }
+
+.string-lunomon{
+    display: flex;
+    flex-direction: column;
+}
