@@ -7,6 +7,21 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/*formatacao dos textos, fontes e afins*/
+.label-titulo-card{
+
+    font-size: 1.5em;
+    text-indent: 2em;
+    font-weight: 700;
+    height: 100%;
+    max-height: 3em;
+    padding-top: 1em;
+    border-top-right-radius: 1.5em;
+    border-top-left-radius: 1.5em;
+    width: 100%;
+    background-color: #80D6FF;
+}
+
 .box-aluninhos{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -17,10 +32,13 @@
 .box-aluno{
     align-items: center;
     justify-content: center;
+    border-radius: 2em;
     display: flex;
+    justify-content: flex-start;
+    
+    background-color: aquamarine;
     flex-direction: column;
     margin: 2%;
-    background-color: aquamarine;
     width: 95%;
     height: 15em;
 }
@@ -39,6 +57,51 @@ img{
 
 .espaco{
     padding: 2%;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+
+    .box-aluninhos{
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 2%;
+        border-radius: 2em;
+    }
+
+    .box-aluno{
+        flex-direction: column;
+        margin: 5%;
+        width: 95%;
+        height: 20em;
+    }
+
 }
 
 .string-lunomon{

@@ -20,6 +20,9 @@ async function criaPokemonAluno(alunos){
 
         divStrings.className = 'string-lunomon'
 
+
+        labelNome.className = 'label-titulo-card'
+
         alunoTal = alunos[i];
 
         await firebase.storage().ref('imagens-pokemons/' +alunoTal.img).getDownloadURL().then((url) => img.src = url)
@@ -57,10 +60,3 @@ function adicionarPokemon(){
         }).then(firebase.storage().ref('imagens-pokemons/' +val.id).put(file).then(alert('Upload feito!')))
     )
 }
-$( '#multiple-select-custom-field' ).select2( {
-    theme: "bootstrap-5",
-    width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
-    placeholder: $( this ).data( 'placeholder' ),
-    closeOnSelect: false,
-    tags: true
-} );
