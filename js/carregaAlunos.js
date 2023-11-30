@@ -13,9 +13,12 @@ async function criaPokemonAluno(alunos){
         var divAluno = document.createElement('div')
         divAluno.className = 'box-aluno'
         
+        var divStrings = document.createElement('div')
         var labelNome = document.createElement('label')
         var labelTipo = document.createElement('label')
         var img = document.createElement('img')
+
+        divStrings.className = 'string-lunomon'
 
         alunoTal = alunos[i];
 
@@ -23,8 +26,10 @@ async function criaPokemonAluno(alunos){
         labelNome.innerHTML = alunoTal.nome
         labelTipo.innerHTML = alunoTal.tipos
 
-        divAluno.appendChild(labelNome)
-        divAluno.appendChild(labelTipo)
+        
+        divStrings.appendChild(labelNome)
+        divStrings.appendChild(labelTipo)
+        divAluno.appendChild(divStrings)
         divAluno.appendChild(img)
 
         boxAlunos.appendChild(divAluno)
@@ -52,3 +57,7 @@ function adicionarPokemon(){
         }).then(firebase.storage().ref('imagens-pokemons/' +val.id).put(file).then(alert('Upload feito!')))
     )
 }
+$('#multiple-select').mobiscroll().select({
+    inputElement: document.getElementById('my-input'),
+    touchUi: false
+});

@@ -40,3 +40,8 @@ img{
 .espaco{
     padding: 2%;
 }
+
+.string-lunomon{
+    display: flex;
+    flex-direction: column;
+}
