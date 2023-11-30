@@ -17,6 +17,9 @@ async function criaPokemonAluno(alunos){
         var labelTipo = document.createElement('label')
         var img = document.createElement('img')
 
+
+        labelNome.className = 'label-titulo-card'
+
         alunoTal = alunos[i];
 
         await firebase.storage().ref('imagens-pokemons/' +alunoTal.img).getDownloadURL().then((url) => img.src = url)
