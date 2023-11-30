@@ -57,7 +57,10 @@ function adicionarPokemon(){
         }).then(firebase.storage().ref('imagens-pokemons/' +val.id).put(file).then(alert('Upload feito!')))
     )
 }
-$('#multiple-select').mobiscroll().select({
-    inputElement: document.getElementById('my-input'),
-    touchUi: false
-});
+$( '#multiple-select-custom-field' ).select2( {
+    theme: "bootstrap-5",
+    width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
+    placeholder: $( this ).data( 'placeholder' ),
+    closeOnSelect: false,
+    tags: true
+} );
