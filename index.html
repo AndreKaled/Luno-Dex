@@ -4,36 +4,57 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Welcome to Firebase Hosting</title>
+    <title>Luno-Dex</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
   </head>
   <body>
 
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-storage.js"></script>
     <script src="js/firebase.js"></script>
 
     <h1>Luno-Dex</h1>
-    <div class="box-aluninhos">
-        <div class="box-aluno">
-            <label>André drezinho</label>
-            <label>tipo</label>
-            <img src="?" alt="img-pokealuno">
-        </div>
-        <div class="box-aluno">
-            <label>Ana banana</label>
-            <label>tipo</label>
-            <img src="?" alt="img-pokealuno">
-        </div>
-        <div class="box-aluno">
-            <label>Antônio sem acento</label>
-            <label>tipo</label>
-            <img src="?" alt="img-pokealuno">
-        </div>
-        <div class="box-aluno">
-            <label>Frederico</label>
-            <label>tipo</label>
-            <img src="?" alt="img-pokealuno">
-        </div>
+    <div id="box-aluninhos" class="box-aluninhos">
+        
     </div>
+
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Adicionar Pokeluno</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="add-pokemon">
+          <label class="espaco">Nome:</label>
+          <input class="espaco" type="text" id="nome">
+          <label class="espaco">Tipo(s):</label>
+          <input class="espaco" type="text" id="tipo">
+          <input class="espaco" type="file" id="imagem-pokemon">
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" onclick="adicionarPokemon()">Salvar</button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
+<script src="js/carregaAlunos.js"></script>
 </html>

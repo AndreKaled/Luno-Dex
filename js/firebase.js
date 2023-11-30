@@ -10,6 +10,7 @@
   };
 
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  const app = firebase.initializeApp(firebaseConfig);
+
+  const storage = firebase.storage();
 })()

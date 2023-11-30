@@ -27,3 +27,16 @@
 table{
     width: 100%;
 }
+
+img{
+    width: 40%;
+}
+
+.add-pokemon{
+    display: flex;
+    flex-direction: column;
+}
+
+.espaco{
+    padding: 2%;
+}
