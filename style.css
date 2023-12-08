@@ -7,19 +7,30 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.conteudo{
+    padding-top: 10%;
+}
+.centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    list-style-type: none;
+}
+
 /*formatacao dos textos, fontes e afins*/
 .label-titulo-card{
-
     font-size: 1.5em;
     text-indent: 2em;
     font-weight: 700;
-    height: 100%;
     max-height: 3em;
     padding-top: 1em;
-    border-top-right-radius: 1.5em;
-    border-top-left-radius: 1.5em;
-    width: 100%;
+    border-top-right-radius: 1.4em;
+    border-top-left-radius: 1.4em;
     background-color: #80D6FF;
+    width: 100%;
 }
 
 .box-aluninhos{
@@ -35,19 +46,48 @@
     border-radius: 2em;
     display: flex;
     justify-content: flex-start;
-    
     background-color: aquamarine;
     flex-direction: column;
-    margin: 2%;
-    width: 95%;
+    width: 90%;
     height: 15em;
-}
-table{
-    width: 100%;
+    margin: 3%;
 }
 
+.string-lunomon{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2%;
+}
+
+.separador-lunomon{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-right: 2%;
+}
+
+.flutuante-titulo{
+    position: fixed;
+    z-index: 1;
+    width: 100%;   
+}
+
+.absolute-titulo{
+    position: fixed;
+}
+
+.flutuante{
+    position: relative;
+    padding-left: 95%;
+}
+
+.absolute{
+    position: fixed;
+    bottom: 0;
+}
 img{
-    width: 40%;
+    width: 130px;
 }
 
 .add-pokemon{
@@ -56,7 +96,7 @@ img{
 }
 
 .espaco{
-    padding: 2%;
+    margin: 2%;
 }
 
 
@@ -95,16 +135,6 @@ img{
         border-radius: 2em;
     }
 
-    .box-aluno{
-        flex-direction: column;
-        margin: 5%;
-        width: 95%;
-        height: 20em;
-    }
 
 }
 
-.string-lunomon{
-    display: flex;
-    flex-direction: column;
-}
