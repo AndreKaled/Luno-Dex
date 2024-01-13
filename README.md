@@ -1,6 +1,6 @@
 # Luno-Dex
 
-Projeto inspirado na Pokedex, de Pokemon, e adaptada para armazenar alunos, com intuito de salvar alunos da turma 
+Projeto inspirado na Pokedex, de Pokemon, e adaptada para armazenar alunos, com intuito de salvar memórias de alunos da turma 
 na escola onde estudei (IFAM - CMC).
 
 ## Tecnologias utilizadas
@@ -13,4 +13,4 @@ na escola onde estudei (IFAM - CMC).
 
 ## Como testar?
 
-Acesse este [link](https://andrekaled.github.io/Luno-Dex/) para testar, o website foi hospedado pelo Github.io
+Acesse este [link](https://luno-dex.vercel.app) para testar, o website foi hospedado pelo Vercel
